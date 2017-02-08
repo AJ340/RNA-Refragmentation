@@ -1,0 +1,34 @@
+README
+Andres Quinones at Hunter College
+
+This is my submission for the Graph Theory Independent Study Project
+
+I represent my graph as a Adjacency Matrix and because there can be multiple edges between two vertexes and each node has a label, each cell in my adjacency matrix is a vector of strings which contains the label or an "x" signifying the edge has no label.
+
+The code to get all of the Euler Circuits is located within the AdjacencyMatrix.cpp. While designing i figured it would be useful to call .getAllEulerCircuits on an instance of the class
+
+The G and UZ enzyme code is the RNA-Utility.cpp
+
+The code for processing the input strings
+(including computing the start and end vertexes, and gathering the non-single fragments for construction of the matrix)
+is located within RNA-StringParse.cpp
+
+Within main.cpp you will find the code that uses these files to solve the problem
+I keep an unordered map of the labels of the vertexes -> to its index in the AdjacencyMatrix and i also keep a vector of strings so that i can map from index -> vertex label (useful for decoding the output of the AdjacencyMatrix)
+
+Future Ideas:
+- Cleaning up the classes
+- Creating a class for this use case of Adjacency Matrix
+- Making AdjacencyMatrix an Abstract Class
+- Creating a class for RNA-Parsing
+- Test some ideas on making finding Euler Circuits slightly faster than in my current implimentation
+	(One of which: Make the container for past edges traversed a map to reduce the complexity of searching)
+
+
+
+The input is hardcoded into the init_Examples function within main.cpp
+The output of my program can be found in RNA-Refragmentation-AQ-Output.txt
+The program can be compiled using 
+make
+or 
+g++ -std=c++11 main.cpp -o RNA-Reconstruction-AQ

@@ -1,0 +1,198 @@
+Andress-MacBook-Air:RNA-PROJECT andresquinones$ make
+make RNA-Refragmentation-AQ 
+g++ -std=c++11 -o RNA-Refragmentation-AQ main.cpp  
+Andress-MacBook-Air:RNA-PROJECT andresquinones$ ./RNA-Refragmentation-AQ
+--------------------------- Start of Example 1 ------------------------
+
+Target RNA After G_Enzyme:  AUCG,AUG,G,CU,ACUAUACG
+Target RNA After UC_Enzyme:  GGAC,U,AU,GAU,C,U,AC,GC,AU
+Ammount of non_single fragments: 7
+
+ Ammount of vertexes made from non_single fragments: 4
+RNA reconstruction must begin with [AU] and end with [C/U] 
+_____________________________________________
+||Index |  Vertex Label.                     
+|| 0    | AU
+|| 1    | G
+|| 2    | C
+|| 3    | AC
+_____________________________________________
+
+Adjacency Matrix Displayed: 
+0,0: {  NE  }
+0,1: { C | x }
+0,2: {  NE  }
+0,3: {  NE  }
+
+1,0: { x }
+1,1: {  NE  }
+1,2: { x }
+1,3: { G }
+
+2,0: { U }
+2,1: {  NE  }
+2,2: {  NE  }
+2,3: {  NE  }
+
+3,0: {  NE  }
+3,1: { U/AU/AC }
+3,2: {  NE  }
+3,3: {  NE  }
+
+
+
+All Euler Circuits Found: 
+AUCGAUGGACUAUACGCU
+AUCGGACUAUACGAUGCU
+AUGAUCGGACUAUACGCU
+AUGGACUAUACGAUCGCU
+Total Found 4
+
+--------------------------- End of Example 1 ------------------------
+
+--------------------------- Start of Example 2 ------------------------
+
+Target RNA After G_Enzyme:  G,G,CUCUG,UUUACCAG,G,UCAG,G,UCCG,AAAG,G,AAG,CAG,CCAAG,G,CAG,AG,CCCC
+Target RNA After UC_Enzyme:  GGC,U,C,U,GU,U,U,AC,C,AGGU,C,AGGU,C,C,GAAAGGAAGC,AGC,C,AAGGC,AGAGC,C,C,C
+Ammount of non_single fragments: 16
+
+ Ammount of vertexes made from non_single fragments: 5
+RNA reconstruction must begin with [G] and end with [C/C/C/C] 
+_____________________________________________
+||Index |  Vertex Label.                     
+|| 0    | C
+|| 1    | G
+|| 2    | U
+|| 3    | AG
+|| 4    | AAG
+_____________________________________________
+
+Adjacency Matrix Displayed: 
+0,0: {  NE  }
+0,1: { U/C/U | C/C/C }
+0,2: {  NE  }
+0,3: { x | x }
+0,4: { C }
+
+1,0: { G | AAAG/G/AAG }
+1,1: {  NE  }
+1,2: { x }
+1,3: {  NE  }
+1,4: {  NE  }
+
+2,0: {  NE  }
+2,1: { C/C }
+2,2: {  NE  }
+2,3: { U/U/AC/C | C }
+2,4: {  NE  }
+
+3,0: { x | AG }
+3,1: {  NE  }
+3,2: { G | G }
+3,3: {  NE  }
+3,4: {  NE  }
+
+4,0: { G }
+4,1: {  NE  }
+4,2: {  NE  }
+4,3: {  NE  }
+4,4: {  NE  }
+
+
+
+All Euler Circuits Found: 
+
+-- 
+-- For the sake of keeping this output short. 
+-- The 11520 possible refragmentations computed can be found in the file PR0021-Output.txt
+--
+
+Total Found 11520
+
+--------------------------- End of Example 2 ------------------------
+
+--------------------------- Start of Example 3 ------------------------
+
+Target RNA After G_Enzyme:  AAAUCAUAG,G,CAG,AAUG,CAUUCG,AUG,CAAU
+Target RNA After UC_Enzyme:  AAAU,C,AU,AGGC,AGAAU,GC,AU,U,C,GAU,GC,AAU
+Ammount of non_single fragments: 11
+
+ Ammount of vertexes made from non_single fragments: 6
+RNA reconstruction must begin with [AAAU] and end with [C/AAU] 
+_____________________________________________
+||Index |  Vertex Label.                     
+|| 0    | AAAU
+|| 1    | AG
+|| 2    | C
+|| 3    | AAU
+|| 4    | G
+|| 5    | AU
+_____________________________________________
+
+Adjacency Matrix Displayed: 
+0,0: {  NE  }
+0,1: { C/AU }
+0,2: {  NE  }
+0,3: {  NE  }
+0,4: {  NE  }
+0,5: {  NE  }
+
+1,0: {  NE  }
+1,1: {  NE  }
+1,2: { G }
+1,3: { x }
+1,4: {  NE  }
+1,5: {  NE  }
+
+2,0: { AAU }
+2,1: { x }
+2,2: {  NE  }
+2,3: {  NE  }
+2,4: { AU/U/C }
+2,5: {  NE  }
+
+3,0: {  NE  }
+3,1: {  NE  }
+3,2: {  NE  }
+3,3: {  NE  }
+3,4: { x }
+3,5: {  NE  }
+
+4,0: {  NE  }
+4,1: {  NE  }
+4,2: { x | x }
+4,3: {  NE  }
+4,4: {  NE  }
+4,5: { x }
+
+5,0: {  NE  }
+5,1: {  NE  }
+5,2: {  NE  }
+5,3: {  NE  }
+5,4: { x }
+5,5: {  NE  }
+
+
+
+All Euler Circuits Found: 
+AAAUCAUAGGCAGAAUGCAUUCGAUGCAAU
+AAAUCAUAGGCAGAAUGCAUUCGAUGCAAU
+AAAUCAUAGGCAGAAUGAUGCAUUCGCAAU
+AAAUCAUAGGCAGAAUGAUGCAUUCGCAAU
+AAAUCAUAGGCAUUCGCAGAAUGAUGCAAU
+AAAUCAUAGGCAUUCGCAGAAUGAUGCAAU
+AAAUCAUAGGCAUUCGAUGCAGAAUGCAAU
+AAAUCAUAGGCAUUCGAUGCAGAAUGCAAU
+AAAUCAUAGAAUGCAGGCAUUCGAUGCAAU
+AAAUCAUAGAAUGCAUUCGAUGCAGGCAAU
+AAAUCAUAGAAUGCAGGCAUUCGAUGCAAU
+AAAUCAUAGAAUGCAUUCGAUGCAGGCAAU
+AAAUCAUAGAAUGAUGCAGGCAUUCGCAAU
+AAAUCAUAGAAUGAUGCAUUCGCAGGCAAU
+AAAUCAUAGAAUGAUGCAGGCAUUCGCAAU
+AAAUCAUAGAAUGAUGCAUUCGCAGGCAAU
+Total Found 16
+
+--------------------------- End of Example 3 ------------------------
+
+Andress-MacBook-Air:RNA-PROJECT andresquinones$ 
